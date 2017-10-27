@@ -56,7 +56,7 @@ io.on('connection', function (socket) {
                 let moved = thisRoom.firstPlayer.socket.move(thisRoom.xo);
                 let resultBot = thisRoom.fill(moved.i, moved.j, thisRoom.firstPlayer.socket.name);
                 status(socket, thisRoom, resultBot, moved.i, moved.j);
-                },2*1000);
+                },8*1000);
             }
         }
     })

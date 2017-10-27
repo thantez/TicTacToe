@@ -1,6 +1,8 @@
 # TicTacToe
 TicTacToe simple game with node.js
 
+if you run this project with VSCode Debuger , it can be faster ;) .
+
 Install command:
 
   $ npm install

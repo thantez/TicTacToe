@@ -1,0 +1,189 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font: 200 1.125em/1.5 Raleway;
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  width: 80%;
+  min-width: 400px;
+  max-width: 400px;
+  height: 195px;
+  min-height: 195px;
+  max-height: 195px;
+  margin: 30px auto 0;
+}
+
+.text {
+  text-align:center;
+  width: 80%;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 45px;
+  margin: 55px auto 0;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 9px;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+  font-size: 1.667em;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+._input:hover,
+.text:active,
+.text:hover {
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+}
+
+._button {
+  display: block;
+  width: 100%;
+  min-width: 400px;
+  max-width: 400px;
+  height: 45px;
+  margin: 30px auto 0;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 9px;
+  background-color: rgb(222, 222, 222);
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(28, 50, 7, 0.76);
+}
+
+._button:hover {
+  background-color: rgb(230, 244, 234);
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+}
+
+._button:active {
+  background-color: rgb(230, 244, 234);
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+  color: rgb(0, 0, 0);
+}
+
+._button:focus {
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+}
+
+._button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+._input {
+  display: block;
+  width: 100%;
+  min-width: 400px;
+  max-width: 400px;
+  height: 45px;
+  margin: 0 auto;
+  padding: 0 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 9px;
+  background-color: rgb(242, 242, 242);
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  font-weight: 100;
+  color: rgb(48, 129, 104);
+}
+
+._input:active {
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+  font-weight: 100;
+}
+
+._input:focus {
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+  font-weight: 300;
+  color: rgb(0, 0, 0);
+}
+
+._select {
+  display: block;
+  width: 100%;
+  min-width: 400px;
+  max-width: 400px;
+  height: 45px;
+  margin: 30px auto 0;
+  padding-left: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 9px;
+  background: url('../images/select-arrows.svg') rgb(242, 242, 242);
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: right center;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+  font-size: 1em;
+  color: rgb(0, 0, 0);
+}
+
+._select:hover {
+  background-color: rgb(224, 224, 224);
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+  font: normal 200 18/1.5 Raleway;
+}
+
+._select:active,
+._select:focus {
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, .5);
+  font-weight: 200;
+}
+
+.text a,
+.text em,
+.text span {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: inherit;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}
+
+.text strong {
+  border-top-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 0;
+  border-color: transparent;
+  border-style: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-transform: uppercase;
+  text-decoration: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: inherit;
+  opacity: 1;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
+}

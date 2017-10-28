@@ -30,7 +30,7 @@ var event;
         else{
             player = data.p2;
         }
-        $("#sendBtn").html("after 7 second, game willbe starting");
+        $("#sendBtn").html("after 7 seconds, game willbe starting");
         $("#sendBtn").css('color', 'black');
         $("#sendBtn").prop('disabled', true);
         // #region a
@@ -81,8 +81,14 @@ var event;
 
     $("body").on('click','#btnCancel',()=>{
         if(confirm('are you sure?')){
-            console.log('close');
+            socket.emit('disconnecting','by user');
+            window.open('', '_self').close();
             window.close();
+            close();
+            $("#body").empty();
+            $("#head").empty();
+            $("head").append(`<link rel="stylesheet" href="css/index.css">`);
+            $("#body").append(`<p class="text">Good Bye</p>`);
         }
     });
 

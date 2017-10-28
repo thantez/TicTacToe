@@ -1,12 +1,12 @@
 class ai {
     constructor(number) {
         this.name = 'robat';
-        console.log(this.name);
         this.hardness = parseInt(Math.random() * 10);
         this.hardness = this.hardness == 9 ? 3 : this.hardness % 3;
         this.number = number;
         this.enemyNumber = (this.number+1)%2;
         console.log('hardness is ' + this.hardness.toString());
+        //this switch set pointer of move to hardness case
         switch (this.hardness) {
             case 0:
                 this.move = this.easy;
@@ -28,37 +28,37 @@ class ai {
             let cont = 0;
             let Icont = 0;
             for (let j = 0; j < 3; j++) {
-                if (xo[i][j] == this.number) { console.log('ii'); Icont++; } else if (xo[i][j] == this.enemyNumber) { console.log('ji'); cont++; }
+                if (xo[i][j] == this.number) { Icont++; } else if (xo[i][j] == this.enemyNumber) { cont++; }
             };
-            if (cont == 2 && Icont == 0) { console.log('i+' + Icont.toString()); result.stat = 0; result.i = i; result.prop = 'i'; return result; } else if (cont == 0 && Icont == 2) { console.log('k' + Icont.toString()); result.stat = 1; result.i = i; result.prop = 'i'; return result; }
+            if (cont == 2 && Icont == 0) { result.stat = 0; result.i = i; result.prop = 'i'; return result; } else if (cont == 0 && Icont == 2) { result.stat = 1; result.i = i; result.prop = 'i'; return result; }
         }
         for (let i = 0; i < 3; i++) {
             let cont = 0;
             let Icont = 0;
             for (let j = 0; j < 3; j++) {
-                if (xo[j][i] == this.number) { console.log('ij'); Icont++; } else if (xo[j][i] == this.enemyNumber) { console.log('jj'); cont++; }
+                if (xo[j][i] == this.number) { Icont++; } else if (xo[j][i] == this.enemyNumber) { cont++; }
             }
-            if (cont == 2 && Icont == 0) { console.log('j+' + Icont.toString()); result.stat = 0; result.i = i; result.prop = 'j'; return result; } else if (cont == 0 && Icont == 2) { console.log('t' + Icont.toString()); result.stat = 1; result.i = i; result.prop = 'j'; return result; }
+            if (cont == 2 && Icont == 0) { result.stat = 0; result.i = i; result.prop = 'j'; return result; } else if (cont == 0 && Icont == 2) { result.stat = 1; result.i = i; result.prop = 'j'; return result; }
         }
         let cont = 0;
         let Icont = 0;
         for (let i = 0; i < 3; i++) {
-            if (xo[i][i] == this.number) { console.log('i0'); Icont++; } else if (xo[i][i] == this.enemyNumber) { console.log('j0'); cont++; }
+            if (xo[i][i] == this.number) { Icont++; } else if (xo[i][i] == this.enemyNumber) { ccont++; }
         }
-        if (cont == 2 && Icont == 0) { console.log('x+' + Icont.toString()); result.stat = 0; result.i = 0; result.prop = 'x'; return result; } else if (cont == 0 && Icont == 2) { console.log('u' + Icont.toString()); result.stat = 1; result.i = 0; result.prop = 'x'; return result; }
+        if (cont == 2 && Icont == 0) { result.stat = 0; result.i = 0; result.prop = 'x'; return result; } else if (cont == 0 && Icont == 2) { result.stat = 1; result.i = 0; result.prop = 'x'; return result; }
         cont = Icont = 0;
         let j = 2;
         for (let i = 0; i < 3; i++) {
-            if (xo[i][j] == this.number) { console.log('i1'); Icont++; } else if (xo[i][j] == this.enemyNumber) { console.log('j1'); cont++; }
+            if (xo[i][j] == this.number) { Icont++; } else if (xo[i][j] == this.enemyNumber) { cont++; }
             j--;
         }
-        if (cont == 2 && Icont == 0) { console.log('y' + Icont.toString()); result.stat = 0; result.i = 1; result.prop = 'x'; return result; } else if (cont == 0 && Icont == 2) { console.log('z' + Icont.toString()); result.stat = 1; result.i = 1; result.prop = 'x'; return result; }
+        if (cont == 2 && Icont == 0) { result.stat = 0; result.i = 1; result.prop = 'x'; return result; } else if (cont == 0 && Icont == 2) { result.stat = 1; result.i = 1; result.prop = 'x'; return result; }
         result.stat = -1; return result;
+        //Robot saw the xo board :)
     }
     veryHard(xo) {
         let first = this.winOrFail(xo);
         if (first.result == true) {
-            console.log(first);
             return { i: first.i, j: first.j };
         }
         if (xo[0][0] != undefined && xo[2][2] == undefined) return { i: 2, j: 2 };
@@ -74,7 +74,6 @@ class ai {
     hard(xo) {
         let first = this.winOrFail(xo);
         if (first.result == true) {
-            console.log(first);
             return { i: first.i, j: first.j };
         }
         let i, j;
@@ -88,7 +87,6 @@ class ai {
     normal(xo) {
         let first = this.winOrFail(xo);
         if (first.result == true) {
-            console.log(first);
             return { i: first.i, j: first.j };
         }
         return this.easy(xo);
@@ -103,8 +101,8 @@ class ai {
         }
     }
     winOrFail(xo) {
+        //user or I , can we win or fail?
         let status = this.status(xo);
-        console.log(status);
         switch (status.prop) {
             case 'i':
                 {
@@ -148,3 +146,4 @@ class ai {
     }
 }
 module.exports = ai;
+//exporting this class with nodejs syntax

@@ -10,7 +10,7 @@ const express = require('express'),
 
 app.use(express.static(path.join(__dirname, 'static')))
 
-http.listen(8143 , function () {
+http.listen(process.env.PORT, function () {
     console.log('listening on *:4000');
 });
 

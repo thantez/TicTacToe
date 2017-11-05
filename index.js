@@ -104,7 +104,7 @@ io.on('connection', function (socket) {
         //disconnection pulse to another player
     })
 });
-http.listen(process.env.PORT , function () {
+http.listen((process.env.PORT||3516) , function () {
     console.log('listening on *:4000');
 });
 

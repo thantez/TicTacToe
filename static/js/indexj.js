@@ -1,4 +1,4 @@
-const socket = io('https://noters.ir:6035');
+const socket = io('https://noters.ir:8080');
 var player, nobat, name , clicked = false;
 $('form').submit(function () {
     name = $("#nameInp").val();

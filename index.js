@@ -10,7 +10,7 @@ const express = require('express'),
 
 app.use(express.static(path.join(__dirname, 'static')))
 
-http.listen(6035 , function () {
+http.listen(8080 , function () {
     console.log('listening on *:4000');
 });
 

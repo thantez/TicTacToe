@@ -2,12 +2,13 @@ const express = require('express'),
     app = express(),
     fs = require('fs'),
     _ = require('lodash'),
+    path = require('path'),
     http = require('http').Server(app),
     io = require('socket.io')(http),
     ai = require('./ai'),
     room = require('./room'), rooms = [];
 
-app.use(express.static(__dirname + '/static'));
+app.use(express.static(path.join(__dirname, 'static')))
 
 app.get('/', (req, res, next) => {
     res.sendFile(__dirname + '/static/index.html');
@@ -103,7 +104,7 @@ io.on('connection', function (socket) {
         //disconnection pulse to another player
     })
 });
-http.listen(4000, function () {
+http.listen(process.env.PORT , function () {
     console.log('listening on *:4000');
 });
 

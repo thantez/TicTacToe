@@ -10,6 +10,10 @@ const express = require('express'),
 
 app.use(express.static(path.join(__dirname, 'static')))
 
+http.listen((process.env.PORT||3516) , function () {
+    console.log('listening on *:4000');
+});
+
 app.get('/', (req, res, next) => {
     res.sendFile(__dirname + '/static/index.html');
 });
@@ -103,9 +107,6 @@ io.on('connection', function (socket) {
         io.to(thisRoom.name).emit('dis');
         //disconnection pulse to another player
     })
-});
-http.listen((process.env.PORT||3516) , function () {
-    console.log('listening on *:4000');
 });
 
 function toFile(winner){

@@ -11,9 +11,9 @@
   "license": "MIT",
   "dependencies": {
     "express": "latest",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.5",
     "node-random-name": "^1.0.1",
-    "socket.io": "latest"
+    "socket.io": "2.0.4"
   },
   "devDependencies": {},
   "repository": {

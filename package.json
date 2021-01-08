@@ -13,7 +13,7 @@
     "express": "latest",
     "lodash": "^4.17.4",
     "node-random-name": "^1.0.1",
-    "socket.io": "latest"
+    "socket.io": "2.4.0"
   },
   "devDependencies": {},
   "repository": {
